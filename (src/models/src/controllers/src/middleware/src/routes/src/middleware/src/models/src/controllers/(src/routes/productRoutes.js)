@@ -1,0 +1,28 @@
+const express = require('express');
+const router = express.Router();
+const {
+  getAllProducts,
+  getProduct,
+  createProduct,
+  updateProduct,
+  deleteProduct
+} = require('../controllers/productController');
+const { protect } = require('../middleware/auth');
+const { authorize, checkOwnership } = require('../middleware/authorize');
+const Product = require('../models/Product');
+
+// Public routes
+router.get('/', getAllProducts);
+router.get('/:id', getProduct);
+
+// Protected routes - require authentication
+router.post('/', protect, createProduct);
+
+// Protected routes - require ownership or admin role
+router.put('/:id', protect, checkOwnership(Product), updateProduct);
+router.delete('/:id', protect, checkOwnership(Product), deleteProduct);
+
+// Admin-only route example
+// router.delete('/admin/:id', protect, authorize('admin'), deleteProduct);
+
+module.exports = router;

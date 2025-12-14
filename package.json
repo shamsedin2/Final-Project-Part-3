@@ -17,5 +17,18 @@
   "bugs": {
     "url": "https://github.com/shamsedin2/Final-Project-Part-3/issues"
   },
-  "homepage": "https://github.com/shamsedin2/Final-Project-Part-3#readme"
+  "homepage": "https://github.com/shamsedin2/Final-Project-Part-3#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "jest": "^30.2.0",
+    "nodemon": "^3.1.11",
+    "supertest": "^7.1.4"
+  }
 }
