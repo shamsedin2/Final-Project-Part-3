@@ -1,4 +1,4 @@
-# Your API Name
+# Your API  that emphasize JWT authentication
 
 ## Description
 A production-ready REST API with JWT authentication and role-based authorization.
