@@ -79,7 +79,7 @@ npm test
 ```
 
 ## Deployment
-Deployed on Render: [Your API URL]
+Deployed on Render: https://img.shields.io/badge/PostgreSQL-13%2B-blue
 
 ## License
 MIT
